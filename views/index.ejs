@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <%# google fonts links %>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%# css link %>
-    <link rel="stylesheet" href="/styles/main.css">
+    <%# google fonts links %>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <%# css link %>
+    <link rel="stylesheet" href="/styles/main.css" />
 
     <title>DealHeal</title>
-</head>
-<body>
+  </head>
+  <body>
+    <%# including the header ejs to the front end %> <%-
+    include("partials/header.ejs") %>
 
-    <%- include("partials/header.ejs") %>
+    <section id="hero-section">
 
-    
+        <div id="hero-div" class="josefin-sans">
+      <h1>This is a simple web app that gives steam deals/discount</h1>
+        </div>
 
-</body>
+    </section>
+
+    <section id="discount-section">
+        
+      <div class="grid-container josefin-sans">
+
+       <% content.forEach(contentItem=>{ %> 
+            <div class="card">
+            <p><strong>
+            <%= contentItem.title %></strong>
+          </p>
+           <img class="thumb-img" src="<%= contentItem.thumb %>" alt="Thumb Image">
+     <p>Normal Price : <%= contentItem.normalPrice %>$</p>
+     <p>Discount Price : <%= contentItem.salePrice %>$</p>
+          
+          
+        </div>
+       <% }) %> 
+        
+      </div>
+      </section>
+  </body>
+
+  <footer>
+    <%- include("partials/footer.ejs") %>
+  </footer>
 </html>
