@@ -1,10 +1,33 @@
 /**************************TAG*******************************/
 body{
     margin: 0;
+    background-image: url("/images/background3.png");
+    background-size: cover;
 }
 /**************************Classes*******************************/
 .flex-container{
     display: flex;
-    background-color: black;
+    padding: 0px 10px;
+    box-shadow: 1px 1px 5px 0.5px black;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    justify-content: space-between;
+    align-items: center;
+    height: 51px;
+    flex: 1;
 }
+
+.anchor-no-decoration{
+    text-decoration: none;
+    color: rgb(222, 220, 220);
+}
+
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 /**************************IDS*******************************/
+
