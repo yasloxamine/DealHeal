@@ -52,7 +52,7 @@ hr{
     margin: 40px 50px;
 }
 
-.card,#hero-div,.custom-btn,.custom-text-input{
+.card,#hero-div,.custom-btn,.custom-text-input,#img-card{
     height: 180px;
     padding: 0px 10px;
     box-shadow: 1px 1px 5px 1px black;
@@ -62,7 +62,7 @@ hr{
     margin: 5px;
 }
 
-.card:hover{
+.card:hover,#hero-div:hover,#img-card:hover{
     box-shadow: 1px 1px 8px 0.5px black;
     backdrop-filter: blur(30px);
   }
@@ -99,20 +99,20 @@ border: none;
 
 /**************************IDS*******************************/
 
-#hero-div{
+#hero-div,#img-card{
 display: block;
     margin-top: 40px;
-    width: 680px;
+    width: 780px;
     height: 110px;
     padding: 10px;
     text-align: center;
 }
 
-#hero-div:hover{
-    box-shadow: 1px 1px 8px 0.5px black;
-}
-
 #hero-flex{
     display: flex;
     justify-content: center;
+}
+
+#img-card{
+    width: 110px;
 }
