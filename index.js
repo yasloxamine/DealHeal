@@ -53,14 +53,15 @@ app.listen(port, () => {
   console.log("Server listening the port :" + port);
 });
 
-//get the current full date using a function
+//get the current full date using a function and returning the value
 function fullTime() {
-  const year = new Date().getFullYear();
-  const month = new Date().getMonth();
-  const day = new Date().getDate();
-  const hour = new Date().getHours();
-  const minutes = new Date().getMinutes();
-  const seconds = new Date().getSeconds();
+    const d = new Date();
+  const year = d.getFullYear();
+  const month = d.getMonth();
+  const day = d.getDate();
+  const hour = d.getHours();
+  const minutes = d.getMinutes();
+  const seconds = d.getSeconds();
 
   return (
     day +
