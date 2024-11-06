@@ -18,33 +18,42 @@
     <title>DealHeal</title>
   </head>
   <body>
-    <%# including the header ejs to the front end %> <%-
-    include("partials/header.ejs") %>
-
-    <%# Hero Section %>
+    <%# including the header ejs to the front end %> 
+   <%# Hero Section %>
+    <%- include("partials/header.ejs") %> 
     <section id="hero-section">
-      <div id="hero-div" class="josefin-sans">
-        <h1>Simple web app that gives current steam deals/discount</h1>
-      </div>
-    </section>
 
+      <div id="hero-flex">
+
+      <div id="hero-div" class="josefin-sans">
+       
+        <h1>Simple web app that gives current steam deals/discount</h1><hr>
+      
+        <input
+          class="custom-text-input"
+          type="text"
+          placeholder="MAX NORMAL PRICE IN $"
+        />
+  
+        <input
+          class="custom-text-input"
+          type="text"
+          placeholder="MAX DISCOUNT PRICE IN $"
+        />
+<br><br>
+        <input class="custom-btn" type="button" value="filter">
+     </div>
+
+    </div>
+    </section>
 
     <%# Discount items section %>
     <section id="discount-section">
       <div class="grid-container josefin-sans">
-
-       <div class="card price-card">
-
-        <input class="custom-text-input" type="text" placeholder="MAX NORMAL PRICE IN $">
-        <hr>
-        <input class="custom-text-input" type="text" placeholder="MAX DISCOUNT PRICE IN $">
-        
-       </div>
-
         <% content.forEach(contentItem=>{ %>
         <div class="card">
           <p><strong> <%= contentItem.title %></strong></p>
-          <hr>
+          <hr />
           <img
             class="thumb-img"
             src="<%= contentItem.thumb %>"
@@ -52,7 +61,7 @@
           />
           <p>Normal Price : <%= contentItem.normalPrice %>$</p>
           <p>Discount Price : <%= contentItem.salePrice %>$</p>
-          <hr>
+          <hr />
           <p>Steam Rating : <%= contentItem.steamRatingText %></p>
         </div>
         <% }) %>
