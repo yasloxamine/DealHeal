@@ -12,10 +12,11 @@ const port = 3000;
 //using the static public folder for styles and images
 app.use(express.static("public"));
 
-//using the bodyparser middleware to parse the body the the ejs and use it in the server side
+//using the bodyparser middleware to parse the body of the ejs and use it in the server side
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//get and render the home route '/'
+//get and render the home route '/' and passing the result of the cheapshark api endpoint using axios framework
+//into the index.ejs as a key value with the name content while also passing the returned value of the fulltime function
 app.get("/", async (req, res) => {
   try {
     const response = await axios(
