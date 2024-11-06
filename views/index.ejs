@@ -21,36 +21,44 @@
     <%# including the header ejs to the front end %> <%-
     include("partials/header.ejs") %>
 
+    <%# Hero Section %>
     <section id="hero-section">
-
-        <div id="hero-div" class="josefin-sans">
-      <h1>This is a simple web app that gives steam deals/discount</h1>
-        </div>
-
+      <div id="hero-div" class="josefin-sans">
+        <h1>Simple web app that gives current steam deals/discount</h1>
+      </div>
     </section>
 
+
+    <%# Discount items section %>
     <section id="discount-section">
-        
       <div class="grid-container josefin-sans">
 
-       <% content.forEach(contentItem=>{ %> 
-            <div class="card">
-            <p><strong>
-            <%= contentItem.title %></strong>
-          </p>
-           <img class="thumb-img" src="<%= contentItem.thumb %>" alt="Thumb Image">
-     <p>Normal Price : <%= contentItem.normalPrice %>$</p>
-     <p>Discount Price : <%= contentItem.salePrice %>$</p>
-          
-          
-        </div>
-       <% }) %> 
+       <div class="card price-card">
+
+        <input class="custom-text-input" type="text" placeholder="MAX NORMAL PRICE IN $">
+        <hr>
+        <input class="custom-text-input" type="text" placeholder="MAX DISCOUNT PRICE IN $">
         
+       </div>
+
+        <% content.forEach(contentItem=>{ %>
+        <div class="card">
+          <p><strong> <%= contentItem.title %></strong></p>
+          <hr>
+          <img
+            class="thumb-img"
+            src="<%= contentItem.thumb %>"
+            alt="Thumb Image"
+          />
+          <p>Normal Price : <%= contentItem.normalPrice %>$</p>
+          <p>Discount Price : <%= contentItem.salePrice %>$</p>
+          <hr>
+          <p>Steam Rating : <%= contentItem.steamRatingText %></p>
+        </div>
+        <% }) %>
       </div>
-      </section>
+    </section>
   </body>
 
-  <footer>
-    <%- include("partials/footer.ejs") %>
-  </footer>
+  <footer><%- include("partials/footer.ejs") %></footer>
 </html>
