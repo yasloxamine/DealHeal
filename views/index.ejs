@@ -18,38 +18,34 @@
     <title>DealHeal</title>
   </head>
   <body>
-    <%# including the header ejs to the front end %> 
-   <%# Hero Section %>
-    <%- include("partials/header.ejs") %> 
+    <%# including the header ejs to the front end %> <%# Hero Section %> <%-
+    include("partials/header.ejs") %>
     <section id="hero-section">
-
       <div id="hero-flex">
+        <div id="hero-div" class="josefin-sans">
+          <h1>Simple web app that gives current steam deals/discount</h1>
+          <hr />
+          <%# filter price form %>
+          <form action="/filterPrice" method="post">
+            <input
+              class="custom-text-input"
+              name="discountPrice"
+              type="text"
+              placeholder="MAX DISCOUNT PRICE IN $"
+            />
+            <br />
+            <input class="custom-btn" type="submit" value="filter" />
+          </form>
 
-      <div id="hero-div" class="josefin-sans">
-       
-        <h1>Simple web app that gives current steam deals/discount</h1><hr>
-      
-        <input
-          class="custom-text-input"
-          type="text"
-          placeholder="MAX NORMAL PRICE IN $"
-        />
-  
-        <input
-          class="custom-text-input"
-          type="text"
-          placeholder="MAX DISCOUNT PRICE IN $"
-        />
-<br><br>
-        <input class="custom-btn" type="button" value="filter">
-     </div>
-
-    </div>
+        </div>
+      </div>
     </section>
 
     <%# Discount items section %>
     <section id="discount-section">
       <div class="grid-container josefin-sans">
+
+        <%# using forEach to display each item in the content object passed from the express %>
         <% content.forEach(contentItem=>{ %>
         <div class="card">
           <p><strong> <%= contentItem.title %></strong></p>
@@ -59,8 +55,8 @@
             src="<%= contentItem.thumb %>"
             alt="Thumb Image"
           />
-          <p>Normal Price : <%= contentItem.normalPrice %>$</p>
           <p>Discount Price : <%= contentItem.salePrice %>$</p>
+          <p>Normal Price : <%= contentItem.normalPrice %>$</p>
           <hr />
           <p>Steam Rating : <%= contentItem.steamRatingText %></p>
         </div>
