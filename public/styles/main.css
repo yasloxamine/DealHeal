@@ -1,9 +1,9 @@
 /**************************TAG*******************************/
 body{
     margin: 0;
-    background-image: url("/images/background3.png");
+    background-color: #222831;
     background-size: cover;
-    color: rgb(41, 40, 40);
+    color: #EEEEEE;
 }
 
 h1{
@@ -22,8 +22,7 @@ hr{
     display: flex;
     padding: 0px 10px;
     box-shadow: 1px 1px 5px 1px black;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
+    background-color: #393E46;
     justify-content: space-between;
     align-items: center;
     height: 51px;
@@ -36,15 +35,15 @@ hr{
 
 .no-decoration{
     text-decoration: none;
-    color: rgb(41, 40, 40);
+    color: #EEEEEE;
 }
 
-.josefin-sans {
-    font-family: "Josefin Sans", sans-serif;
+.mona-sans{
+    font-family: "Mona Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-  }
+    }
 
 .grid-container{
     display: grid;
@@ -53,18 +52,21 @@ hr{
 }
 
 .card,#hero-div,.custom-btn,.custom-text-input,#img-card{
-    height: 180px;
+    height: 200px;
     padding: 0px 10px;
-    box-shadow: 1px 1px 5px 1px black;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 0 1rem 1rem 1rem;
+    background-color: #393E46;
+    border-radius: 1rem;
     margin: 5px;
 }
 
+.custom-text-input,.custom-btn{
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+
 .card:hover,#hero-div:hover,#img-card:hover{
     box-shadow: 1px 1px 8px 0.5px black;
-    backdrop-filter: blur(30px);
   }
 
 .thumb-img{

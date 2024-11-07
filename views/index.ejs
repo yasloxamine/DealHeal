@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%# google fonts links %>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
 
     <%# css link %>
     <link rel="stylesheet" href="/styles/main.css" />
@@ -28,7 +26,7 @@
           <img id="img-card" src="/images/amine.jpg" alt="">
         </div>
 
-        <div id="hero-div" class="josefin-sans">
+        <div id="hero-div" class="mona-sans">
           <h1>Simple web app that gives current steam deals/discount</h1>
           <hr />
           <%# filter price form %>
@@ -49,7 +47,7 @@
 
     <%# Discount items section %>
     <section id="discount-section">
-      <div class="grid-container josefin-sans">
+      <div class="grid-container mona-sans">
 
         <%# using forEach to display each item in the content object passed from the express %>
         <% content.forEach(contentItem=>{ %>
