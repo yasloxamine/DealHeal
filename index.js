@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get("/", async (req, res) => {
   try {
     const response = await axios(
-      "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=20"
+      "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50"
     );
     const result = response.data;
     res.render("index.ejs", { content: result, fulltime: fullTime });

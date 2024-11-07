@@ -6,7 +6,7 @@ body{
     color: #EEEEEE;
 }
 
-h1{
+h1,h2{
     margin: 0 0 10px;
 }
 
@@ -51,7 +51,7 @@ hr{
     margin: 40px 50px;
 }
 
-.card,#hero-div,.custom-btn,.custom-text-input,#img-card{
+.card,#hero-div,.custom-btn,.custom-text-input,#img-card,#info-card{
     height: 200px;
     padding: 0px 10px;
     background-color: #393E46;
@@ -65,13 +65,13 @@ hr{
 }
 
 
-.card:hover,#hero-div:hover,#img-card:hover{
+.card:hover,#hero-div:hover,#img-card:hover,#info-card:hover{
     box-shadow: 1px 1px 8px 0.5px black;
   }
 
 .thumb-img{
     float: left;
-    margin-right: 5px;
+    margin: 10px 5px 0 0;
     border-radius: 0 1rem 1rem 1rem;
 }
 
@@ -101,7 +101,7 @@ border: none;
 
 /**************************IDS*******************************/
 
-#hero-div,#img-card{
+#hero-div,#img-card,#info-card{
 display: block;
     margin-top: 40px;
     width: 780px;
@@ -112,9 +112,14 @@ display: block;
 
 #hero-flex{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 50px;
 }
 
 #img-card{
+    width: 110px;
+}
+
+#info-card{
     width: 110px;
 }
