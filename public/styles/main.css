@@ -96,7 +96,7 @@ border: none;
 }
 
 .custom-btn:hover{
-    box-shadow: 1px 1px 8px 0.5px green;
+    box-shadow: 1px 1px 8px 0.5px #F4CE14;
 }
 
 /**************************IDS*******************************/
