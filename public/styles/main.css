@@ -48,7 +48,7 @@ hr{
 .grid-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin: 40px 50px;
+    margin: 0 50px;
 }
 
 .card,#hero-div,.custom-btn,.custom-text-input,#img-card,#info-card{
@@ -100,6 +100,10 @@ border: none;
 }
 
 /**************************IDS*******************************/
+
+#discount-section{
+    margin: 40px 0;
+}
 
 #hero-div,#img-card,#info-card{
 display: block;
